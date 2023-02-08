@@ -16,7 +16,7 @@ Data: Febreiro de 2023
 #define motorAbaixo 11
 #define pulsador    7
 
-  bool estado = 0;
+  bool estado =  0;
   int contador = 100; //Contador para o número de impulsos ao motor
 
 void setup() {
@@ -59,7 +59,9 @@ void loop() {
     }
 }
   else{               //Se non está o motor accionado, lee botón 10 veces/s 
-    delay(100);
+    digitalWrite(motorArriba, LOW);
+      digitalWrite(motorAbaixo, LOW);
+      delay(100);
   }
   //Fin de accionamento dos motores
 }
